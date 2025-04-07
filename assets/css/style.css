@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Mynerve,Arial, sans-serif;
+    background-image: url(../img/bc.jpg);
+}
+
+.grid-header {
+    grid-area: header;
+}
+
+.grid-aside {
+    grid-area: aside;
+}
+
+.grid-main {
+    grid-area: main;
+}
+
+.grid-footer {
+    grid-area: footer;
+}
+
+
+/* --------------- LAYOUT MOVIL --------*/
+.grid-page {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'aside'
+        'main'
+        'footer';
+    grid-template-columns: 1fr;}
+
+
+
+
+/* NAVBAR */
+nav {
+    background-color: #f1c02e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.navLogoText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navTitle {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+}
+
+.navText h1 {
+    font-family: 'Mynerve', sans-serif;
+}
+
+.navText h2 {
+    font-family: 'Meow Script';
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+.navSubtitle h4 {
+    color: white;
+    font-family: 'Mynerve', sans-serif;
+    padding: 10px;
+    font-weight: 100;
+    font-size: 1.2em;
+    size: auto;
+    
+
+}
+
+nav img {
+    width: 150px;
+}
+
+
+/*----------- ESTILO ASIDE------------ */
+
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: rgb(255, 255, 255);
+    height: 100%;
+    background-color: #f07f22;
+}
+
+aside h2 {
+    margin-top: 5px;
+    margin-left:10px;
+    padding: 10px;
+    font-family: 'Mynerve', 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+
+.asideList {
+    display: none;
+    flex-direction: column;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+aside button {
+    font-size: 1.5em;
+    border: none;
+    text-decoration: none;
+    background: none;
+    color: rgb(0, 0, 0);
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+aside button:hover {
+    color: #f07f22;
+    background-color: white;
+}
+
+
+.asideList a {
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    padding: 5px;
+}
+
+.asideList a:hover {
+    color: #f07f22;
+    background-color: white;
+}
+
+
+/* -----------ESTILO MAIN------------ */
+.grid-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.orderButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.529);
+}
+
+.orderButton p {
+    margin: 2px;
+}
+
+.orderButton select {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gray;
+    padding: 10px;
+    width: 100%;
+}
+
+.orderButton select:hover {
+    background-color: whitesmoke;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    overflow-y: scroll;
+    padding: 20px;
+
+}
+/* ---ITEMS---- */
+.guitarra {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.guitarra h2 {
+    font-size: 1.5em;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.itemGtr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.violin {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.violin h2 {
+    font-size: 1.5em;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.itemVln {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.cuerdas {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.cuerdas h2 {
+    font-size: 1.5em;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.itemCuerdas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+
+.grid-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.itemImgText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+    background-color: rgba(240, 248, 255, 0.785)
+}
+
+.grid-item img {
+    padding: 5px;
+    width: 170px;
+    border-radius: 30px;
+}
+
+.grid-item h3 {
+    font-size: 1.1em;
+    color: black;
+    font-weight: 600;
+
+}
+
+.grid-item h4 {
+    font-size: 0.9em;
+    color: black;
+    font-weight: 300;
+    text-decoration: line-through;
+}
+
+.grid-item h5 {
+    font-size: 1.1em;
+    color: #ffaa00;
+    font-weight: 600;
+}
+
+.pageButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.pageButtons button {
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 0.7em;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
+.pageButtons button:hover {
+    background-color: whitesmoke;
+}
+
+
+/*----------------- ESTILO FOOTER--------- */
+
+footer {
+    background-color: #f1c02e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.iconSocial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconSocial a {
+    margin: 5px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.iconSocial a {
+    color: white;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.iconSocial a:visited {
+    color: white;
+}
+
+.iconSocial a:hover {
+    scale: 1.08;
+}
+
+.footerText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footerText h2 {
+    font-size: 1em;
+    color: white;
+    font-weight: 300;
+
+}
+
+.footerText h3 {
+    font-size: 0.6em;
+    color: white;
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* --------------MEDIA QUERIES------------------- */
+
+@media (min-width: 575px) {
+    nav {
+        flex-direction: row;
+        padding: 0px 20px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .navLogoText {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .grid-page {
+        grid-template-areas:
+            'header header'
+            'aside  main'
+            'footer main';
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr 7fr 1fr;
+        height: 100vh;
+
+    }
+    .guitarra {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .itemGtr{
+        flex-direction: row;
+        justify-content:flex-start ;
+        align-items:flex-start;
+        flex-wrap: wrap;
+        
+    }
+    .violin {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .itemVln{
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .cuerdas {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .itemCuerdas { 
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .grid-container {
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+
+    aside {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    aside button{
+        display: none;
+    }
+    
+    .asideList {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        padding: 10px;
+    }
+    .itemImgText {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 300px;
+        padding:0 10px;
+}
+
+}
